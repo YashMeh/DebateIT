@@ -1,0 +1,8 @@
+
+<h1><%= found_post.title %></h1>
+<p> <%= found_post.body %>..</p>
+<h2><%= found_post.date.toString().substring(0,10) %></h2>
+<% found_post.comments.forEach(function(comment){ %>
+	
+<strong><p><%= comment.author%></strong>-<%= comment.text%></p>
+<% }); %>
