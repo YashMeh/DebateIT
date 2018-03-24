@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+	 
+	 <!-- <script type="text/javascript" src="jquery-3.2.1.min.js"></script> -->
+	<style type="text/css">
+		body {
+	 		background:url(https://cdn.dribbble.com/users/170231/screenshots/1139413/attachments/146557/GT_flat_office_scene.jpg);
+	 		background-size: cover;
+	 		background-position: center;
+	 		color: white;
+	 		background-color: #555;
+	 		background-repeat: no-repeat;
+	 		display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-attachment: fixed;
+            font-family: 'Rammetto One', cursive;
+	 	}
+	 	main {
+     flex: 1 0 auto;
+ }
+	 	html{
+	 		height: 100%;
+	 	}
+	 	.navbar-fixed {position: absolute;
+	 		z-index:999999999;
+	 	}
+	 	nav ul li a{
+  color: black;
+}    
+hr.style-one {
+border: 0;
+height: 1px;
+background: #333;
+background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+	</style>
+</head>
+<body>
+
+ <header>
+ 	
+<nav class="container  teal darken-1 ">
+  <div class="nav-wrapper black-text">
+    <a href="/posts" class="brand-logo center black-text">Boolean</a>
+    <ul class="right ">
+    	<% if(!currentUser){ %>
+      <li><a href="/login" class="yellow-text">Login</a></li>
+      <li><a href="/register" class="yellow-text" >Signup</a></li>
+  
+   <% } else { %>
+      <li><a href="#">Hi, <span class="yellow-text"><%= currentUser.username %></span></a></li>
+      <li><a href="/logout" class="yellow-text">Logout</a></li>
+
+  <% } %>
+      
+    </ul>
+  </div>
+</nav>
+	</div>
+ </header>
+

@@ -1,11 +1,22 @@
-<h1>Sign-up Form </h1>
-
+<% include partials/header %>
+<main>
+<div class="row container">
+<div style="margin-top:6em;margin-left:18em;">
+    <div class="col s12 m6 container ">
+      <div class="card teal lighten-2 z-depth-5 hoverable">
+        <div class="card-content black-text">
+<span class="card-title black-text center">Sign Up</span>
 <form action="/register" method="POST">
    <input type="text" placeholder="username" name="username">
    <input type="password" placeholder="password" name="password">
-   <button>Submit</button>
+   <button class="btn yellow black-text">Submit<i class="material-icons right">cake</i></button></button>
 
 </form>
-<li><a href="/register">Sign Up</a></li>
-<li><a href="/login">Login</a></li>
-<li><a href="/logout">Login</a></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+<% include partials/footer %>

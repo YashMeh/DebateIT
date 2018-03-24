@@ -1,6 +1,7 @@
 var express=require("express");
 var router=express.Router();
 var Post=require("../models/post");
+var user=require("../models/user");
 
 
 //default route
@@ -15,7 +16,8 @@ router.get("/posts",function(req,res){
 			res.send("Sorry some problem occured while showing the posts.");        //====================//WORK ON ERROR HANDLING
 		}
 		else{
-			res.render("posts/home",{posts:posts});
+			res.render("posts/home",{posts:posts,currentUser:req.user});
+			console.log(req.user);
 		}
 	});
 

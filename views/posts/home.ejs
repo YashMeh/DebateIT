@@ -1,7 +1,21 @@
+<% include ../partials/header %>
+<main>
 <% posts.forEach(function(post){ %>
-	<h1><%= post.title %></h1>
-	<p> <%= post.body.substring(0,10) %>..</p>
-	<h2><%= post.date.toString().substring(0,10) %></h2>
-	<button><a href="/posts/<%= post._id%>">Read More</a></button>
-	<a href="/posts/<%= post._id %>/comment/new">Add Comment</a>
-<% }); %>
+	<div class="container">
+    	<div class="card teal lighten-2 z-depth-5 hoverable">
+    		<div class="card-content">
+    		<span class="card-title black-text"><%= post.title%></span>
+    		<hr class="style-one">
+    	    <p class="black-text"><%= post.body.substring(0,100)%>..</p>
+    	    <br><br><br><br>
+    	    <hr class="style-one">
+            <span class="yellow-text"style="margin-top:25px;display:inline-block"><%= post.date.toString().substring(0,15) %></span>
+    </div>
+    <span style="margin-right: 1.25em;margin-left: 1.25em;margin-bottom: 1.25em ;display: inline-block"><a class=" hoverable yellow black-text    btn-large " href="/posts/<%= post._id%>"><i class="material-icons left">content_paste</i>READ</a></span>
+    <span style="margin-right: 1.25em;margin-left: 1.25em;margin-bottom: 1.25em ;display: inline-block"><a class=" hoverable yellow black-text    btn-large " href="/posts/<%= post._id%>/comment/new"><i class="material-icons left">chat</i>COMMENT</a></span>
+    </div>
+    </div>
+<% }) %>
+</main>
+
+<% include ../partials/footer %>

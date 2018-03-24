@@ -38,7 +38,7 @@ function seedDB(){
 		}
 		else{
 			console.log("Removed Posts");
-			//Create posts
+			// Create posts
 			data.forEach(function(post){
 				posts.create(post,function(err,created_posts){
 					if(err){

@@ -1,9 +1,26 @@
-<h2>Add Comments To The <%= found_post.title%> </h2>
+<% include ../partials/header %>
 
 
-<form action="/posts/<%= found_post._id%>/comment" method="POST">
+<main>
+<div class="row container">
+<div style="margin-top:6em;margin-left:18em;">
+    <div class="col s12 m6 container ">
+      <div class="card blue-grey darken-1 z-depth-5 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title center">Add Comments To The <%= found_post.title%></span>
+         <form action="/posts/<%= found_post._id%>/comment" method="POST">
 		<input type="text" name="comment[text]" placeholder="text">
 		
-		<button>Submit</button>
+		<button class="btn">Submit</button>
 
-	</form>
+	</form> 
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </main>
+<main>
+
+
+<% include ../partials/footer %>
